@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import mainLogo from '../images/logos/main_black-lax.png';
+---
+
+<!-- header -->
+<div id="nav" class="sticky top-0 z-20 max-h-screen bg-black">
+	<header class="shadow-lg">
+		<nav arial-lable="Primary" class="container flex h-header items-center">
+			<a href="/" rel="prefetch" title"Home" data-home-link>
+				<Image src={mainLogo} alt="main logo, in black" width="auto" height="200" loading="lazy" class="main-logo" />
+			</a>
+		</nav>
+	</header>
+	<hr class="border-astro-gray-500">
+</div>
+<style>
+	.main-logo {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: auto;
+		height: 100px;
+		z-index: -1;
+		border-radius: 10rem;
+	}
+
+	.shadow-lg {
+		--tw-shadow: 0px 25px 7px rgba(24, 24, 27, .01), 0px 16px 6px rgba(24, 24, 27, .04), 0px 9px 5px rgba(24, 24, 27, .15), 0px 4px 4px rgba(24, 24, 27, .26), 0px 1px 2px rgba(24, 24, 27, .29), 0px 0px 0px rgba(24, 24, 27, .3);
+		--tw-shadow-colored: 0px 25px 7px var(--tw-shadow-color), 0px 16px 6px var(--tw-shadow-color), 0px 9px 5px var(--tw-shadow-color), 0px 4px 4px var(--tw-shadow-color), 0px 1px 2px var(--tw-shadow-color), 0px 0px 0px var(--tw-shadow-color);
+
+		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+	}
+
+	.border-astro-gray-500 {
+		--tw-border-opacity: 0.75;
+		border-color: rgb(204 204 250 / var(--tw-border-opacity));
+	}
+</style>

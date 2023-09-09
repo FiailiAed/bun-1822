@@ -7,7 +7,7 @@ import CommonHeader from '../components/CommonHeader.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 import { Image } from 'astro:assets';
-import mainLogo from '../images/logos/main_black-lax.png';
+import mainLogo from '../images/main_black-lax.png';
 ---
 
 <Layout title="1822 LAX">
@@ -20,46 +20,18 @@ import mainLogo from '../images/logos/main_black-lax.png';
 		<main id="main" class"relative z-10 flex flex-1 flex-col">
 			<section class="landing-section relative overflow-x-hidden pb-40 pt-14 sm:pt-20 lg:pt-32">
 				<h1 class="mb-10 max-w-[18ch] px-4 text-center font-obviously text-5xl/[1.1] font-semibold md:text-6xl/[1.1] lg:text-7xl/[1.1]">
-					<span class="text-gradient">1822</span>
+					<span class="text-gradient"><a href="/">1822</a></span>
 				</h1>
 				<ViewTransitions />
 				<p class="body px-2 md:px-8 text-center text-astro-gray-100 body-large max-w-3xl">
-					Full Service. Lacrosse. Company.
+					Stringing
 				</p>
-				<div class="mb-14 mt-8 grid grid-cols-1 grid-rows-1 gap-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 sm:mb-16 md:mb-20 lg:mb-24 xl:mb-28">
-					<Card
-						href="/stringing"
-						title="Stringing"
-					 />
-					<Card
-						href="/training/training"
-						title="Training"
-					 />
-					<Card
-						href="/custom"
-						title="Customization"
-					 />
-				</div>
 			</section>
 
 			<div class="relative">
 				<div class="bg-grid absolut inset-0 z-grid"></div>
 				<div class="bg-grid relative grid gap-32 sm:gap-40 md:gap-48 lg:gap-64">
 					<section class="">
-						<ul>
-							<p class="instructions">
-								To get started, open the directory <code>src/pages</code> in your project.<br />
-								<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-							</p>
-							<p class="instructions">
-								To get started, open the directory <code>src/pages</code> in your project.<br />
-								<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-							</p>
-							<p class="instructions">
-								To get started, open the directory <code>src/pages</code> in your project.<br />
-								<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-							</p>
-						</ul>
 					</section>
 				</div>
 			</div>
@@ -127,6 +99,20 @@ import mainLogo from '../images/logos/main_black-lax.png';
 		background-position-y: -9px;
 		-webkit-mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
 		mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
+	}
+	.text-base {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	.text-gray {
+		color: #cccccc;
+	}
+	.link {
+		--tw-text-opacity: 1;
+		color: rgb(242 246 250 / var(--tw-text-opacity));
+		transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+		transition-timing-function: cubic-bezier(.4,0,.2,1);
+		transition-duration: .15s;
 	}
 	.text-astro-gray-100 {
 		--tw-text-opacity: 1;
