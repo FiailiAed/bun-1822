@@ -25,21 +25,29 @@ import mainLogo from '../../images/main_black-lax(2).png';
 					<span class="text-gray"><a href="/training/training">Online Player Portal</a></span>
 
 				</h1>
-				<p class="body px-2 md:px-8 text-center text-astro-gray-100 body-large max-w-3xl">
-					Full Service. Lacrosse. Company.
-				</p>
 				<ViewTransitions />
-				<div class="mb-14 mt-8 grid grid-cols-1 grid-rows-1 gap-2 sm:lg:grid-cols-2">
-					<Card
-						href="/training/indi"
-						title="Sign Up!"
-					 />
-					<Card
-						href="/training/portal"
-						title="Online Player Portal"
-					 />
-				</div>
 			</section>
+
+			<!-- Clerk Sign In -->
+			<div id="sign-in"></div>
+			<script>
+			  const script = document.createElement('script');
+			  script.setAttribute('data-clerk-publishable-key', 'pk_test_ZXF1aXBwZWQtZ3VpbmVhLTc2LmNsZXJrLmFjY291bnRzLmRldiQ');
+			  script.async = true;
+			  script.src = `https://equipped-guinea-76.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js`;
+			 
+			  script.addEventListener('load', async function () {
+				await window.Clerk.load();
+			 
+				const signInComponent = document.querySelector('#sign-in');
+			 
+				window.Clerk.openSignIn(signInComponent, {
+				  appearance: {
+				  }
+				});
+			  });
+			  document.body.appendChild(script);
+			</script>
 
 			<div class="relative">
 				<div class="bg-grid absolut inset-0 z-grid"></div>
@@ -53,7 +61,6 @@ import mainLogo from '../../images/main_black-lax(2).png';
 		<CommonFooter />
 
 	</div>
-
 </Layout>
 
 <style>
